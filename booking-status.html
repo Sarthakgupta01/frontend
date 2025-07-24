@@ -91,7 +91,7 @@
                 return;
             }
 
-            fetch(`http://localhost:8090/bookings?userName=${encodeURIComponent(userName)}`)
+            fetch(`https://ezpark-backend.onrender.com/bookings?userName=${encodeURIComponent(userName)}`)
                 .then(response => {
                     if (!response.ok) throw new Error("Network error");
                     return response.json();

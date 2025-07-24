@@ -102,7 +102,7 @@
     </div>
 
     <script>
-        fetch('http://localhost:8090/cities/getAll')
+        fetch('https://ezpark-backend.onrender.com/cities/getAll')
             .then(res => res.json())
             .then(cities => {
                 const select = document.getElementById('citySelect');

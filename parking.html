@@ -79,7 +79,7 @@
         const city = params.get('city');
         document.getElementById("cityHeading").innerText += " " + city.charAt(0).toUpperCase() + city.slice(1);
 
-        fetch(`http://localhost:8090/parking-places/?city=${city}`)
+        fetch(`https://ezpark-backend.onrender.com/parking-places/?city=${city}`)
             .then(res => res.json())
             .then(places => {
                 const container = document.getElementById('placesContainer');
@@ -95,7 +95,7 @@
             </div>`;
                     container.appendChild(card);
 
-                    fetch(`http://localhost:8090/parking-places/${place.id}/slots`)
+                    fetch(`https://ezpark-backend.onrender.com/parking-places/${place.id}/slots`)
                         .then(res => res.json())
                         .then(slots => {
                             const slotDiv = document.getElementById(`slots-${place.id}`);
@@ -114,7 +114,7 @@
             const userName = prompt("Enter your name to book:");
             if (!userName) return;
 
-            fetch(`http://localhost:8090/bookings?id=${slotId}&userName=${userName}`, {
+            fetch(`https://ezpark-backend.onrender.com/bookings?id=${slotId}&userName=${userName}`, {
                 method: 'POST'
             })
                 .then(res => res.json())
