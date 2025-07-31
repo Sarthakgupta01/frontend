@@ -36,5 +36,6 @@ It features a responsive frontend, a powerful Java Spring Boot backend, and a Po
 - Backend: [Render](https://render.com/)
 - Database: Render PostgreSQL
 - Frontend: [GitHub Pages](https://pages.github.com/)
+- UptimeRobot: Ping every 5 minutes (https://uptimerobot.com/)
 
 ---
